@@ -18,9 +18,10 @@ jobs:
     environment: ${{ inputs.environment }}
     steps:
       - env:
+          GH_DEBUG: api
           GH_TOKEN: ${{ secrets.HOMEBREW_PR_PAT }}
         run: |
-          gh auth status
+          gh api /
 
       - name: Bump homebrew-core formula
         uses: mislav/bump-homebrew-formula-action@v3
