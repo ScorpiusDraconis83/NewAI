@@ -15,7 +15,7 @@ on:
 jobs:
   bump:
     runs-on: ubuntu-latest
-    environment: ${{ inputs.environment }}
+    # environment: ${{ inputs.environment }}  # uncomment this to actually work
     steps:
       - env:
           GH_DEBUG: api
